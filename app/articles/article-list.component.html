@@ -1,1 +1,16 @@
-<h1>Test</h1>
+<div class="search-results"
+ infinite-scroll 
+[infiniteScrollDistance]="1" 
+[infiniteScrollThrottle]="300" 
+(scrolled)="onScroll()"
+    class="row">
+    <div class="col-sm-9 col-md-6 col-lg-10" *ngFor="let article of articles" style="background-color:#fafafa;min-height: 900px;">
+        <div class="panel panel-default" style="min-height:900px;">
+            <h1 class="panel-heading">{{article.title}}</h1>
+            <div class="panel-body">{{article.body}}</div>
+              <div class="panel-footer">{{article.author}}</div>
+        </div>
+    </div>
+    <div class="col-sm-3 col-md-6 col-lg-2">
+    </div>
+</div>
