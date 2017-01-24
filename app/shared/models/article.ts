@@ -1,7 +1,19 @@
 export class Article {
-    albumId: number;
     id: number;
-    title: string;
-    url: string;
-    thumbnailUrl: string;
+    title: number;
+    author: string;
+    body: string;
+    related : RelatedArticle[];
+    next:NextArticle
+}
+
+export class RelatedArticle {
+   id:number;
+   title:string;
+   image:string
+}
+
+export class NextArticle {
+  id:number;
+  title:string;
 }
