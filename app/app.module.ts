@@ -8,6 +8,7 @@ import {InfiniteScrollModule} from 'angular2-infinite-scroll';
 //components
 import {AppComponent} from './app.component';
 import {ArticleListComponent} from './articles/article-list.component'
+import {RelatedArticlesComponent} from './articles/related-articles.component'
 
 //@Injectables() 
 import {ArticleService} from './articles/article.service'
@@ -25,7 +26,8 @@ import 'rxjs/add/operator/catch'
     ],
     declarations: [
         AppComponent,
-        ArticleListComponent
+        ArticleListComponent,
+        RelatedArticlesComponent
     ],
     providers:[ArticleService],
     bootstrap: [AppComponent]
