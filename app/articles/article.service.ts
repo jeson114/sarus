@@ -1,7 +1,7 @@
 import { Http, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable'
-import { Article } from '../shared/models/article'
+import { Observable } from 'rxjs/Observable';
+import { Article } from '../shared/models/article';
 
 @Injectable()
 export class ArticleService {

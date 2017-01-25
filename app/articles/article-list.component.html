@@ -1,16 +1,34 @@
-<div class="search-results"
+<!--<div
  infinite-scroll 
 [infiniteScrollDistance]="1" 
 [infiniteScrollThrottle]="300" 
 (scrolled)="onScroll()"
     class="row">
-    <div class="col-sm-9 col-md-6 col-lg-10" *ngFor="let article of articles" style="background-color:#fafafa;min-height: 900px;">
-        <div class="panel panel-default" style="min-height:900px;">
+    <div class="col-sm-9 col-md-6 col-lg-10"  style="background-color:#fafafa;min-height: 900px;">
+        <div class="panel panel-default" style="min-height:900px;" *ngFor="let article of articles">
             <h1 class="panel-heading">{{article.title}}</h1>
             <div class="panel-body">{{article.body}}</div>
               <div class="panel-footer">{{article.author}}</div>
         </div>
     </div>
     <div class="col-sm-3 col-md-6 col-lg-2">
+        <related-articles [related]="article"></related-articles>
+    </div>
+</div>-->
+<div class="container" infinite-scroll 
+                        [infiniteScrollDistance]="1" 
+                        [infiniteScrollThrottle]="300" 
+                        (scrolled)="onScroll()">
+    <div class="row" *ngFor="let article of articles">
+        <div class="col-sm-9 col-md-6 col-lg-9" style="background-color:#fafafa;min-height: 900px;">
+            <div class="panel panel-default" style="min-height:900px;">
+                <h1 class="panel-heading">{{article.title}}</h1>
+                <div class="panel-body">{{article.body}}</div>
+                <div class="panel-footer">{{article.author}}</div>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-6 col-lg-3">
+            <related-articles [related]="article.related"></related-articles>
+        </div>
     </div>
 </div>
