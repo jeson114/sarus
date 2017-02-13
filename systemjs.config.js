@@ -9,7 +9,8 @@
         '@angular': 'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs': 'node_modules/rxjs',
-        'angular2-infinite-scroll': 'node_modules/angular2-infinite-scroll'
+        'angular2-infinite-scroll': 'node_modules/angular2-infinite-scroll',
+        'in-viewport': 'node_modules/in-viewport'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
@@ -26,6 +27,10 @@
         },
         'angular2-infinite-scroll': {
             main: 'angular2-infinite-scroll.js',
+            defaultExtension: 'js'
+        },
+        'in-viewport': {
+            main: 'in-viewport.js',
             defaultExtension: 'js'
         }
 
