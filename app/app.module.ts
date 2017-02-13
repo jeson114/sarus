@@ -7,8 +7,9 @@ import {InfiniteScrollModule} from 'angular2-infinite-scroll';
 
 //components
 import {AppComponent} from './app.component';
-import {ArticleListComponent} from './articles/article-list.component'
-import {RelatedArticlesComponent} from './articles/related-articles.component'
+import {ArticleListComponent} from './articles/article-list.component';
+import {RelatedArticlesComponent} from './articles/related-articles.component';
+import {ScrollSpyComponent} from './directives/scroll-spy.directive';
 
 //@Injectables() 
 import {ArticleService} from './articles/article.service'
@@ -27,7 +28,8 @@ import 'rxjs/add/operator/catch'
     declarations: [
         AppComponent,
         ArticleListComponent,
-        RelatedArticlesComponent
+        RelatedArticlesComponent,
+        ScrollSpyComponent
     ],
     providers:[ArticleService],
     bootstrap: [AppComponent]

@@ -15,12 +15,13 @@
         <related-articles [related]="article"></related-articles>
     </div>
 </div>-->
-<div class="container" infinite-scroll 
+<div class="container" id="wrapper" infinite-scroll 
                         [infiniteScrollDistance]="1" 
                         [infiniteScrollThrottle]="300" 
-                        (scrolled)="onScroll()">
-    <div class="row" *ngFor="let article of articles">
-        <div class="col-sm-9 col-md-6 col-lg-9" style="background-color:#fafafa;min-height: 900px;">
+                        (scrolled)="onScroll()"
+                         >
+    <div class="row" *ngFor="let article of articles" scroll-spy >
+        <div class="col-sm-9 col-md-6 col-lg-9" style="background-color:#fafafa;min-height: 900px;" >
             <div class="panel panel-default" style="min-height:900px;">
                 <h1 class="panel-heading">{{article.title}}</h1>
                 <div class="panel-body">{{article.body}}</div>
